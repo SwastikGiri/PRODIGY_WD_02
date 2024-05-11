@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vmax;
+}
+.watch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1vmax;
+}
+.outer{
+    margin-bottom: 20px;
+    height: 21vmax;
+    width: 21vmax;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-animation{
+    background: linear-gradient(-45deg,rgb(249, 75, 0),rgb(255, 191, 0),rgb(0, 255, 251),rgb(64, 91, 224),rgb(255, 70, 101));
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 505;
+    }
+}
+.inner{
+    width:20vmax;
+    height: 20vmax;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vmax;
+}
+.btncontainer{
+    margin: 1vmax;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.btncontainer button{
+    font-size: 1.4vmax;
+    width: 5.5vmax;
+    height: 5.5vmax;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+.btncontainer button:hover{
+    background-color: rgba(255, 255, 255, 0.231);
+}
+.laps{
+    list-style: none;
+    color: white;
+    width: 20vmax;
+    height: 10vmax;
+    overflow: auto;
+}
+.laps::-webkit-scrollbar{
+    display: none;
+}
+.lap-items{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 2px;
+    padding-inline: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 10px;
+}
+.timestamp{
+    margin-left: 15px;
+}
+.clear_laps{
+    margin-top: 20px;
+    width: 7vmax;
+    height: 3vmax;
+    font-size: 1.5vmax;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+.clear_laps:hover{
+    background-color: rgba(255, 255, 255, 0.178);
+}
+.hidden{
+    visibility: hidden;;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width:1026px) {
+    .outer{
+        height: 30vmax;
+        width: 30vmax;
+    }
+    .inner{
+        height: 29vmax;
+        width: 29vmax;
+        font-size: 5vmax;
+    }
+    .btncontainer button{
+        height: 7vmax;
+        width: 7vmax;
+        border: 3px solid white;
+        font-size: 1.9vmax;
+    }
+    .clear_laps{
+        width: 12vmax;
+        height: 4vmax;
+        font-size: 2vmax;
+    }
+}
+@media screen and (max-width:770px) {
+    .laps{
+        width: 30vmax;
+        height: 21vmax;
+    }
+}
